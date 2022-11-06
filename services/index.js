@@ -1,8 +1,8 @@
 import jwt from 'jsonwebtoken';
 
-const createAccessToken = ({ email, password }) => {
+const createAccessToken = ({ username, password }) => {
     return jwt.sign({
-        data: { email, password }
+        data: { username, password }
     }, 'secret', { expiresIn: '2h' });
 }
 
